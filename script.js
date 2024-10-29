@@ -11,13 +11,12 @@ const pfcalc = document.getElementById("cpf");
 pfcalc.addEventListener("click", polynomialFunction);
 
 function heronFormula() {
-    const a = document.getElementById("sa").value;
-    const b = document.getElementById("sb").value;
-    const c = document.getElementById("sc").value;
+    const a = Number(document.getElementById("sa").value);
+    const b = Number(document.getElementById("sb").value);
+    const c = Number(document.getElementById("sc").value);
     
-    let area = a+b+c;
+    let area = Math.round((0.25*(Math.sqrt(4 * a**2 * b**2 - (a**2 + b**2 -c**2)**2)))*10)/10;
 
-    console.log(a,b,c);
     document.getElementById("ahf").value = area;
 }
 
