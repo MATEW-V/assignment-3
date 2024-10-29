@@ -13,33 +13,40 @@
     <div class="app">
         <h1 class="header">Heron's Formula</h1>
         <label for="sa">Side A: </label><br>
-        <input type="text" id="sa" name="SideA"><br>
+        <input type="number" id="sa" name="SideA"><br>
         <label for="sb">Side B: </label><br>
-        <input type="text" id="sb" name="SideB"><br>
+        <input type="number" id="sb" name="SideB"><br>
         <label for="sc">Side C: </label><br>
-        <input type="text" id="sc" name="SideC"><br>
+        <input type="number" id="sc" name="SideC"><br>
         <label for="ahf">Area:</label><br>
-        <input type="text" id="ahf" name="areahf" readonly><br>
-        <button type="submit" id="chf"class="calculate">Calculate</button>
+        <input type="number" id="ahf" name="areahf" readonly><br>
+        <button type="submit" id="chf" class="calculate">Calculate</button>
+    </div>
 
+    <div class="app">
         <h1 class="header">Ambiguous Case</h1>
         <label for="aa">Angle A: </label><br>
-        <input type="text" id="aa" name="angleA"><br>
+        <input type="number" id="aa" name="angleA"><br>
         <label for="ab">Angle B: </label><br>
-        <input type="text" id="ab" name="angleB"><br>
+        <input type="number" id="ab" name="angleB"><br>
         <label for="ac">Angle C: </label><br>
-        <input type="text" id="ac" name="angleC"><br>
+        <input type="number" id="ac" name="angleC"><br>
         <label for="amct">Triangle Type: </label><br>
-        <input type="text" id="amct" name="ambcaseType" readonly><br>
-        <button type="submit" id="cac"class="calculate">Calculate</button>
+        <input type="number" id="amct" name="ambcaseType" readonly><br>
+        <button type="submit" id="cac" class="calculate">Calculate</button>
+    </div>
 
+    <div class="app">
         <h1 class="header">Newton's Method</h1>
         <label for="rg">Root Guess: </label><br>
-        <input type="text" id="rg" name="rootg"><br>
+        <input type="number" id="rg" name="rootg"><br>
         <label for="ra">Root Approx: </label><br>
-        <input type="text" id="ra" name="roota" readonly><br>
+        <input type="number" id="ra" name="roota" readonly><br>
         <button type="submit" id="cnm" class="calculate">Calculate</button>
 
+    </div>
+
+    <div class="app">
         <h1 class="header">Polynomial Function</h1>
         <label for="co">Coefficients:</label><br>
         <input type="text" id="co" name="coefficients"><br>
@@ -52,7 +59,6 @@
         <label for="pe">Polynomial Evaluation:</label><br>
         <input type="text" id="pe" name="polyeval" readonly><br>
         <button type="submit" id="cpf" class="calculate">Calculate</button>
-
     </div>
     <script defer src="script.js"></script>
 </body>

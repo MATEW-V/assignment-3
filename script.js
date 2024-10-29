@@ -14,8 +14,11 @@ function heronFormula() {
     const a = document.getElementById("sa").value;
     const b = document.getElementById("sb").value;
     const c = document.getElementById("sc").value;
+    
+    let area = a+b+c;
 
     console.log(a,b,c);
+    document.getElementById("ahf").value = area;
 }
 
 function ambiguousCase() {
