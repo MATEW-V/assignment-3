@@ -17,7 +17,6 @@ function heronFormula() {
     const c = Number(document.getElementById("sc").value);
 
     let area = Math.round((0.25 * (Math.sqrt(4 * a ** 2 * b ** 2 - (a ** 2 + b ** 2 - c ** 2) ** 2))) * 100) / 100;
-
     document.getElementById("ahf").value = area;
 }
 
@@ -39,16 +38,12 @@ function ambiguousCase() {
         }
     }
     else if (180 > angleA > 90) { //obtus
-        if (sideA < sideB || h === sideA) {
+        if (sideA < sideB || sideB === sideA) {
             document.getElementById("amct").value = "No triangle";
         } else if (sideA > sideB) {
             document.getElementById("amct").value = "One triangle";
         }
     }
-    else {
-        document.getElementById("amct").value = "Enter a valid angle between 1 - 180";
-    }
-    console.log(angleA, sideA, sideB, h);
 }
 
 function newtonMethod() {
