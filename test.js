@@ -9,6 +9,7 @@ Object.keys(calcFunctions).forEach(id => {
     document.getElementById(id).addEventListener("click", calcFunctions[id]);
 });
 
+
 function heronFormula() {
     document.getElementById("ahf").value = "";
     const a = Number(document.getElementById("sa").value);
