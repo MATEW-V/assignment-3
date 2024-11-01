@@ -47,10 +47,11 @@ function ambiguousCase() {
 
 function newtonMethod() {
     const rg = document.getElementById("rg").value;
+    
     let x0 = rg;
     let x1 = 0;
     let iterations = 0;
-    
+
     while (true) { //dont get lucky and guess a root
         x1 = x0 - (6 * x0 ** 4 - 13 * x0 ** 3 - 18 * x0 ** 2 + 7 * x0 + 6) / (24 * x0 ** 3 - 39 * x0 ** 2 - 36 * x0 + 7);
         iterations += 1;
