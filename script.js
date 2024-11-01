@@ -50,14 +50,15 @@ function newtonMethod() {
     let x0 = rg;
     let x1 = 0;
     let iterations = 0;
+    
     while (true) { //dont get lucky and guess a root
         x1 = x0 - (6 * x0 ** 4 - 13 * x0 ** 3 - 18 * x0 ** 2 + 7 * x0 + 6) / (24 * x0 ** 3 - 39 * x0 ** 2 - 36 * x0 + 7);
-        iterations+=1;
+        iterations += 1;
         console.log(x1, iterations);
         if (Math.abs(x0 - x1) < 0.001) break;
         x0 = x1;
-        document.getElementById("itr").innerHTML = "Iterations: "+iterations;
-        document.getElementById("ra").value = Math.round(x1*100)/100; 
+        document.getElementById("itr").innerHTML = "Iterations: " + iterations;
+        document.getElementById("ra").value = Math.round(x1 * 100) / 100;
     }
 }
 
@@ -66,5 +67,20 @@ function polynomialFunction() {
     const b = document.getElementById("ex").value;
     const c = document.getElementById("xv").value;
 
-    console.log(a, b, c);
+    const coeffArray = a.split(' ').map(Number);
+    const expArray = b.split(' ').map(Number);
+
+    let result = 0;
+    let polyFunc = "";
+
+    for (let i = 0; i < coeffArray.length; i++) {
+        result += coeffArray[i] * Math.pow(c, expArray[i]);
+        if (coeffArray.length - i > 1) {
+            polyFunc += coeffArray[i] + "x^" + expArray[i] + " + "
+        } else {
+            polyFunc += coeffArray[i] + "x^" + expArray[i]
+        }
+    }
+    document.getElementById("pf").value = polyFunc;
+    document.getElementById("pe").value = "f(" + c + ") = " + result;
 }
